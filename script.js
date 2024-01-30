@@ -25,6 +25,12 @@ nextButton.addEventListener("click", () => {
   if (chapter > totalChapters) {
     chapter = 1;
   }
+
+  if (audio.paused) {
+    audio.play();
+    pauseButton.style.display = "none";
+    playButton.style.display = "inline-block";
+  }
   updateChapter();
 });
 
@@ -41,6 +47,13 @@ audio.addEventListener("ended", () => {
   if (chapter > totalChapters) {
     chapter = 1;
   }
+
+  if (audio.paused) {
+    audio.play();
+    pauseButton.style.display = "none";
+    playButton.style.display = "inline-block";
+  }
+
   updateChapter();
 });
 
