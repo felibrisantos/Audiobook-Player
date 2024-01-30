@@ -46,7 +46,7 @@ prevButton.addEventListener("click", () => {
   updateChapter();
 });
 
-audio.addEventListener("onended", () => {
+audio.addEventListener("ended", () => {
   chapter++;
   if (chapter > totalChapters) {
     chapter = 1;
